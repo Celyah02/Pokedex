@@ -3,8 +3,22 @@ import { useEffect, useState } from "react";
 
 export default function Index() {
 
+useEffect(() => {
+ //fetch data from pokeapi and log it to the console
+ fetchData()
+}, []);
 
-
+async function fetchData() {
+  try{
+    const response= await fetch(
+      "https://pokeapi.co/api/v2/pokemon?limit=10"
+    );
+    const data = await response.json();
+    console.log(data);
+  } catch(e){
+    console.log(e)
+  }
+}
 
   return (
     <View
