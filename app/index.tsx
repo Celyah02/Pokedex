@@ -1,6 +1,11 @@
 import { Text, View } from "react-native";
+import { useEffect, useState } from "react";
 
 export default function Index() {
+
+
+
+
   return (
     <View
       style={{
