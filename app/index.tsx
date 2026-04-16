@@ -21,7 +21,7 @@ async function fetchPokemons() {
 
     const data = await response.json();
 
-    setPokemons(data); // clean line
+    setPokemons(data.results); // clean line
 
   } catch (e) {
     console.log(e);
