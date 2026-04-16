@@ -9,14 +9,17 @@ useEffect(() => {
 }, []);
 
 async function fetchData() {
-  try{
-    const response= await fetch(
+  try {
+    const response = await fetch(
       "https://pokeapi.co/api/v2/pokemon?limit=10"
     );
+
     const data = await response.json();
-    console.log(data);
-  } catch(e){
-    console.log(e)
+
+    console.log(data); // clean line
+
+  } catch (e) {
+    console.log(e);
   }
 }
 
